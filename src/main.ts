@@ -12,7 +12,7 @@ const chatGPTBot = new ChatGPTBot();
 async function main() {
   weChatBot
     // scan QR code for login
-    .on("scan", async (qrcode, status) => {
+    .on("scan", async (qrcode: string, status: number) => {
       const url = `https://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`;
       console.log(`💡 Scan QR Code to login: ${status}\n${url}`);
       console.log(
